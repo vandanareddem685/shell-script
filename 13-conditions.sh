@@ -10,7 +10,7 @@ echo "Third class"
 elif [ $marks -lt 60 ]; then
 echo "second  class"
 elif [ $marks -lt 75 ]; then
-echo "Third class"
+echo "First class"
 else
 echo "Distinction"
 fi
