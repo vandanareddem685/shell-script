@@ -14,4 +14,4 @@ echo "PID of the command running in background now: $!"
 wait $!
 echo "Line number:$LINENO"
 echo "Previous command exit status: $?"
-echo "Total time executed for this script" $SECONDS"
+echo "Total time executed for this script: $SECONDS"
