@@ -9,6 +9,7 @@ VALIDATE(){
     exit 1
     else
     echo "INstallation success"
+    fi
 }
 
 if [ $ID -ne 0 ]
@@ -17,6 +18,7 @@ echo "Please run this script with root user"
 exit 1
 else
 echo "You are root user"
+fi
 
 dnf install nginx -y
 VALIDATE
