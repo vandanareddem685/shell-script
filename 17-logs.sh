@@ -1,31 +1,31 @@
 #!/bin/bash
 
-ID=$(id -u)
+user_id=$(id -u)
+logs_folder="/var/log/shell-practice"
+logs_file="${logs_folder}/${0}.log"
 
-logs_folder="/var/logs/shellscript-practice"
-logs_file="$logs_folder/$0.log"
-mkdir -p ${logs_folder}
+if [ $user_id -ne 0 ]; then
+    echo "Please run this script with sudo access.."
+    exit 1
+fi
 
-VALIDATE(){
-    if [ $1 -ne 0 ];then
-    echo "$2..FAILED" | tee -a $logs_file
+mkdir -p $logs_folder
+
+echo "Script started execution at $(date +"%F %T")" &>> $logs_file
+
+validate(){
+    if [ $1 -ne 0 ]; then
+        echo "${2}..FAILED" | tee -a $logs_file
+        exit 1
     else
-    echo "$2..SUCCESS" | tee -a $logs_file
+        echo "${2}..SUCCESS" | tee -a $logs_file
     fi
 }
 
-if [ $ID -ne 0 ]
-then
-echo "Please run this script with root user"
-exit 1
-else
-echo "You are root user"
-fi
+dnf install nginx -y &>> $logs_file
+validate $? "Nginx Installation"
 
-dnf install nginx -y & >> $logs_file
-VALIDATE $? "Installing nginx"
+dnf install mysql -y &>> $logs_file
+validate $? "Mysql Installation"
 
-dnf install mysql -y & >> $logs_file
-VALIDATE $? "Installing mysql"
-dnf install git -y & >> $logs_file
-VALIDATE $? "Installing git"
+echo "Script execution completed at $(date +"%F %T")" &>> $logs_file
