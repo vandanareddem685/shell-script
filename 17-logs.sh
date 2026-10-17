@@ -4,7 +4,7 @@ ID=$(id -u)
 
 logs_folder = /var/logs/shellscript-practice
 logs_file = $logs_folder/$0.log
-mkdir -p $logs_folder
+mkdir -p ${logs_folder}
 
 VALIDATE(){
     if [ $1 -ne 0 ];then
