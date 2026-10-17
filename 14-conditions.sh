@@ -10,3 +10,5 @@ else
 echo "You are root user"
 fi
 dnf install nginxx -y
+
+dnf install mysqq11 -y
