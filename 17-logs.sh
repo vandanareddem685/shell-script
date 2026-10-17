@@ -2,8 +2,8 @@
 
 ID=$(id -u)
 
-logs_folder = "/var/logs/shellscript-practice"
-logs_file = "$logs_folder/$0.log"
+logs_folder="/var/logs/shellscript-practice"
+logs_file="$logs_folder/$0.log"
 mkdir -p ${logs_folder}
 
 VALIDATE(){
