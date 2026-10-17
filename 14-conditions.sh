@@ -9,7 +9,7 @@ exit 1
 else
 echo "You are root user"
 fi
-dnf install nginx -y
+dnf install nginxx -y
 exit 1
 
 dnf install mysqq11 -y
