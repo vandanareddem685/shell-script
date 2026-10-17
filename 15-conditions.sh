@@ -1,8 +1,8 @@
 #/bin/nash
 
-ID = $(id -u)
+ID=$(id -u)
 
-if [ $ID -ne 0 ]
+if [ $ID -ne 0 ];
 then
 echo "Please run this script with root user"
 exit 1
@@ -10,7 +10,7 @@ else
 echo "You are root user"
 fi
 
-dnf install nginx -y
+dnf install nginxx -y
 if [ $? -ne 0 ]
 then 
 echo  "Nginx installation failed"
