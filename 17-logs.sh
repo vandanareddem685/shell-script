@@ -27,3 +27,5 @@ VALIDATE $? "Installing nginx"
 
 dnf install mysql -y & >> $logs_file
 VALIDATE $? "Installing mysql"
+dnf install git -y & >> $logs_file
+VALIDATE $? "Installing git"
