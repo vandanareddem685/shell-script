@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting"
+fdslkjhgfawyi
 
 exit 1
 fdslkjhgfawyi
