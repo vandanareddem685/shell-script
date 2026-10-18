@@ -1,11 +1,9 @@
 #!/bin/bash
 
-fdslkjhgfawyi
+set -e
 
-exit 1
-fdslkjhgfawyi
+echo "starting"
 
-exit1
+fdslkjhgfawy
+
 echo "proceeding"
-
-exit1
