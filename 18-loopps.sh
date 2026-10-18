@@ -25,7 +25,7 @@ echo "Script started execution at $(date +"%F %T")" &>> $logs_file
 
 for package in $@
 do
-echo "Going to install ${package}"
-dnf install $package -y & >>logs_file
-validate $? "Installing $package"
+    echo "Going to install: ${package}"
+    dnf install $package -y &>> $logs_file
+    validate $? "Installing ${package}"
 done
