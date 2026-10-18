@@ -33,5 +33,6 @@ if [ $? -ne 0 ]; then
  dnf install $package -y
 else
  echo "$package alreay installed.. SKIPPING"
+fi
 
 done
