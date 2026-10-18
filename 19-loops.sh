@@ -30,7 +30,7 @@ dnf list installed $package
 if [ $? -ne 0 ]; then
 
  echo "Going to install $package"
- dnf install $package -y
+ dnf install $package -y & >> logs_file
 else
  echo "$package alreay installed.. SKIPPING"
 fi
