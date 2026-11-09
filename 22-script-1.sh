@@ -5,7 +5,9 @@ present_country="India"
 echo "I am in $present_country"
 echo "PID of $0: $$"
 
-sh 23-script-2.sh
+#sh 23-script-2.sh
+
+source ./23-script-2.sh
 
 
 
