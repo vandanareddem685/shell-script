@@ -10,4 +10,3 @@ echo "PID of $0: $$"
 source ./23-script-2.sh
 
 
-
