@@ -48,10 +48,12 @@ else
 echo  "Files got archived : $filename"
 
 while IFS= read -r line
-do 
+    do 
 
-echo "Files going to be deleted:$line"
-rm -rf $line
-echo "Files deleted:$line"
+        echo "Files going to be deleted:$line"
+        rm -rf $line
+        echo "Files deleted:$line"
 
-done <<< "$files_to_archive"
+    done <<< "$files_to_archive"
+
+fi
