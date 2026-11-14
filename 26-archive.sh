@@ -28,4 +28,10 @@ if [ ! -d "$dest_dir" ]; then
     exit 1
 fi
 
+files_to_archive=$(find $source_dir -name "*.log" -type f -mtime +$days)
+
+if [ -z "$files_to_archive" ]; then
+    echo "No log files found more then $days in $source_dir"
+    exit 0
+fi
 
