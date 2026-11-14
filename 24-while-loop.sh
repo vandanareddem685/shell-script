@@ -1,8 +1,8 @@
 #!/bin/bash
 
-while IFS=read -r line
+while IFS= read -r line
 do
 
 echo $line
 
-done < 02-conversations.sh
+done < 02-conversation.sh
