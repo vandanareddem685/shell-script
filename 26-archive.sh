@@ -54,4 +54,4 @@ echo "Files going to be deleted:$line"
 rm -rf $line
 echo "Files deleted:$line"
 
-done <<< $files_to_archive
+done <<< "$files_to_archive"
