@@ -19,12 +19,12 @@ fi
 
 
 if [ ! -d "$source_dir" ]; then
-    echo -e "${R} ERROR: $source_dir doesn't exists"
+    echo -e "${R} source_directory: $source_dir doesn't exists"
     exit 1
 fi
 
 if [ ! -d "$dest_dir" ]; then
-    echo -e "${R} ERROR: $dest_dir doesn't exists"
+    echo -e "${R} destination_dir: $dest_dir doesn't exists"
     exit 1
 fi
 
