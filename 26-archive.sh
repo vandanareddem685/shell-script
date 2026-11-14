@@ -55,4 +55,3 @@ rm -rf $line
 echo "Files deleted:$line"
 
 done <<< $files_to_archive
-
