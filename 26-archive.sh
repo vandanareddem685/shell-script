@@ -41,7 +41,7 @@ filename=$dest_dir/logs-$timestamp.tar.gz
 
 tar -czf $filename $files_to_archive
 
-if [ $? -ne o ];then
+if [ $? -ne 0 ]; then
     echo "Logs archival failed"
     exit 1
 else
