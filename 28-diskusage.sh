@@ -11,8 +11,8 @@ partition=$(echo $line|awk '{print $7}')
 
 if [ $usage -ge $usage_threshod ]; then
     message+="High disk usage on $partition:$usage \n"
-
-
+fi
 done <<< "$disk_usage"
+
 
 echo -e "$message"
