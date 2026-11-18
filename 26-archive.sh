@@ -9,7 +9,7 @@ Y="\e[33m"
 N="\e[0m"
 
 usage(){
-    echo -e "${R}USAGE: $0 [SOURCE_DIR] [days(optional,default to 14 days)] ${N}"
+    echo -e "${R}USAGE: $0 [SOURCE_DIR] [DEST_DIR] [days(optional,default to 14 days)] ${N}"
     exit 1
 }
 if [ -z "$source_dir" ] || [ -z "$dest_dir" ]; then
